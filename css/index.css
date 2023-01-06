@@ -1,0 +1,29 @@
+body {
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #d9d9d9;
+}
+
+.header-container {
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.header-titulo {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.header-info {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.header-divider {
+  border-top: 3px dashed #bbb;
+  margin-bottom: 10px;
+}
