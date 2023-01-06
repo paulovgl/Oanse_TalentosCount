@@ -1,6 +1,16 @@
-var acc = document.querySelector(`[data-js="accordion"]`);
+const acc = document.querySelector(`[data-js="accordion"]`);
 
-acc.addEventListener("click", (e) => {
+const closeAccordionItem = (accordionToBeClosed) => {
+  const accordionHeaderId = accordionToBeClosed.dataset.accordionHeader;
+  const accordionBodyToBeClosed = document.querySelector(
+    `[data-accordion-body="${accordionHeaderId}"]`
+  );
+
+  accordionToBeClosed.classList.remove("actived");
+  accordionBodyToBeClosed.classList.remove("actived");
+};
+
+const handleAccordionClick = (e) => {
   const accordionHeaderId = e.target.dataset.accordionHeader;
   const clickedAccordionHeader = document.querySelector(
     `[data-accordion-header="${accordionHeaderId}"]`
@@ -14,14 +24,16 @@ acc.addEventListener("click", (e) => {
     .filter((accordionHeader) => accordionHeader !== clickedAccordionHeader)
     .find((accordionHeader) => accordionHeader.classList.contains("actived"));
 
-  if (accordionToBeClosed) {
-    const accordionHeaderId = accordionToBeClosed.dataset.accordionHeader;
-    const accordionBodyToBeClosed = document.querySelector(`[data-accordion-body="${accordionHeaderId}"]`);
+  if (!e.target.dataset.accordionHeader) {
+    return;
+  }
 
-    accordionToBeClosed.classList.remove("actived");
-    accordionBodyToBeClosed.classList.remove("actived");
+  if (accordionToBeClosed) {
+    closeAccordionItem(accordionToBeClosed);
   }
 
   clickedAccordionHeader.classList.toggle("actived");
   accordionToBeOpened.classList.toggle("actived");
-});
+};
+
+acc.addEventListener("click", handleAccordionClick);
