@@ -4,11 +4,14 @@ body {
   background-color: #d9d9d9;
 }
 
+.body-border {
+  padding: 10px;
+  border: 1px solid black;
+}
+
 .header-container {
   text-align: center;
   width: 100%;
-  padding: 10px;
-  border: 1px solid black;
 }
 
 .header-titulo {
@@ -26,4 +29,52 @@ body {
 .header-divider {
   border-top: 3px dashed #bbb;
   margin-bottom: 10px;
+}
+
+.main-accordion {
+  width: 100%;
+}
+
+.accordion-item {
+  border-radius: 5px;
+  text-align: start;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#faisca {
+  background-color: #dfd880;
+}
+
+#flama {
+  background-color: #bdecb6 ;
+}
+
+.accordion-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.accordion-title h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+.accordion-title h4 {
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+  color: black;
+}
+
+.accordion-icon {
+  width: 20px;
+}
+
+.accordion-body {
+  display: none;
+  overflow: hidden;
 }
