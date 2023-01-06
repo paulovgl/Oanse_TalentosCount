@@ -26,8 +26,8 @@ body {
   margin-bottom: 10px;
 }
 
-.header-divider {
-  border-top: 3px dashed #bbb;
+.divider {
+  border-top: 3px dashed black;
   margin-bottom: 10px;
 }
 
@@ -40,6 +40,7 @@ body {
   text-align: start;
   padding: 10px;
   margin-bottom: 10px;
+  box-shadow: 2px 2px 5px black
 }
 
 #faisca {
@@ -74,12 +75,15 @@ body {
   color: white;
 }
 
-
 .accordion-header {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+}
+
+.accordion-header.actived img {
+  transform: rotate(180deg);
 }
 
 .accordion-title h2 {
@@ -98,6 +102,11 @@ body {
 
 .accordion-icon {
   width: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordion-icon.actived {
+  transform: rotate(180deg);
 }
 
 .accordion-body {
@@ -108,7 +117,7 @@ body {
 
 .accordion-body.actived {
   display: block;
+  margin-top: 15px;
   max-height: 200px;
-  padding: 0px;
   overflow: hidden;
 }
