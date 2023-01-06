@@ -101,6 +101,14 @@ body {
 }
 
 .accordion-body {
-  display: none;
+  max-height: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.accordion-body.actived {
+  display: block;
+  max-height: 200px;
+  padding: 0px;
   overflow: hidden;
 }
