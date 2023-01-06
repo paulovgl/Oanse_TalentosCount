@@ -113,6 +113,7 @@ body {
   max-height: 0px;
   padding: 0px;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .accordion-body.actived {
