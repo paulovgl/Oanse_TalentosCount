@@ -135,12 +135,11 @@ const talentosCalculator = () => {
     return soma + i;
   });
   resultOutput.value = "T$" + soma;
-  console.log("Soma: ", soma);
+  talentos = [0];
 };
 
 const clearChecked = (checkbox) => {
   checkbox.checked = false;
-  talentos = [0];
 };
 
 acc.addEventListener("click", handleAccordionClick);
