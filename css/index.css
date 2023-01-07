@@ -168,9 +168,9 @@ body {
 }
 
 .calcular {
-  display: block;
+  display: inline;
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
   width: 100px;
   height: 50px;
@@ -185,23 +185,18 @@ body {
 }
 
 .result-output {
-  display: none;
+  display: flex;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  resize: none;
+  bottom: 10px;
+  left: 20px;
   width: 100px;
   height: 50px;
-  resize: none;
-  border: none;
-  font-size: 36px;
-  margin-bottom: 32px;
+  font-size: 28px;
+  padding-top: 8px;
   border-radius: 10px;
   text-align: center;
   color: black;
   border: 2px solid black;
   background-color: white;
-}
-
-.calcular:hover {
-  background-color: #d9d9d9;
 }
