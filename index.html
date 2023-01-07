@@ -14,8 +14,8 @@
         <div class="header-container">
           <h1 class="header-titulo">Contador de Talentos</h1>
           <p class="header-info ulo">
-            Clique no cartão do manual, selecione as seções e o resultado será
-            exibido na direita.
+            Clique no cartão do manual, selecione as seções e clique em
+            calcular.
           </p>
           <hr class="divider" />
         </div>
@@ -40,7 +40,60 @@
                 />
               </button>
               <div data-accordion-body="1" class="accordion-body">
-                <input type="checkbox" />
+                <form>
+                  <div data-sections="caminhante" class="checkbox-group">
+                    <label for="g1">
+                      <input
+                        data-caminhante-id="1"
+                        type="checkbox"
+                        id="g1"
+                        name="caminhante"
+                        value="1"
+                      />
+                      Grau 1
+                    </label>
+                    <label for="g2">
+                      <input
+                        data-caminhante-id="2"
+                        type="checkbox"
+                        id="g2"
+                        name="caminhante"
+                        value="2"
+                      />
+                      Grau 2
+                    </label>
+                    <label for="g3">
+                      <input
+                        data-caminhante-id="3"
+                        type="checkbox"
+                        id="g3"
+                        name="caminhante"
+                        value="3"
+                      />
+                      Grau 3
+                    </label>
+                    <label for="g4">
+                      <input
+                        data-caminhante-id="4"
+                        type="checkbox"
+                        id="g4"
+                        name="caminhante"
+                        value="4"
+                      />
+                      Grau 4
+                    </label>
+                    <label for="g5">
+                      <input
+                        data-caminhante-id="5"
+                        type="checkbox"
+                        id="g5"
+                        name="caminhante"
+                        value="5"
+                      />
+                      Grau 5
+                    </label>
+                  </div>
+                </form>
               </div>
             </div>
             <div id="faisca" class="accordion-item">
@@ -59,7 +112,30 @@
                   src="./assets/down-arrow.svg"
                 />
               </button>
-              <div data-accordion-body="2" class="accordion-body"></div>
+              <div data-accordion-body="2" class="accordion-body">
+                <form data-checkbox="2">
+                  <label for="g1">
+                    <input type="checkbox" id="g1" name="g1" value="1" />
+                    Grau 1
+                  </label>
+                  <label for="g2">
+                    <input type="checkbox" id="g2" name="g2" value="2" />
+                    Grau 2
+                  </label>
+                  <label for="g3">
+                    <input type="checkbox" id="g3" name="g3" value="3" />
+                    Grau 3
+                  </label>
+                  <label for="g4">
+                    <input type="checkbox" id="g4" name="g4" value="4" />
+                    Grau 4
+                  </label>
+                  <label for="g5">
+                    <input type="checkbox" id="g5" name="g5" value="5" />
+                    Grau 5
+                  </label>
+                </form>
+              </div>
             </div>
             <div id="faisca" class="accordion-item">
               <button
@@ -187,6 +263,10 @@
               </button>
               <div data-accordion-body="9" class="accordion-body"></div>
             </div>
+          </div>
+          <div class="result-container">
+            <button class="calcular">Calcular</button>
+            <textarea disabled class="result-output"></textarea>
           </div>
         </div>
       </main>
