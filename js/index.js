@@ -140,6 +140,7 @@ const talentosCalculator = () => {
 
 const clearChecked = (checkbox) => {
   checkbox.checked = false;
+  talentos = [0];
 };
 
 acc.addEventListener("click", handleAccordionClick);
