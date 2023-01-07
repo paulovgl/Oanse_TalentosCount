@@ -39,13 +39,11 @@ const handleAccordionClick = (e) => {
   accordionToBeOpened.classList.toggle("actived");
 };
 
-acc.addEventListener("click", handleAccordionClick);
-resultBtn.addEventListener("click", () => {
+const talentosCalculator = () => {
   const talentos = [];
 
   for (let i = 0; i < checkedCheckbox.length; i++) {
     if (checkedCheckbox[i].checked) {
-      console.log(checkedCheckbox[i].value);
       talentos.push(parseInt(checkedCheckbox[i].value));
     }
   }
@@ -53,20 +51,7 @@ resultBtn.addEventListener("click", () => {
   const soma = talentos.reduce(function (soma, i) {
     return soma + i;
   });
-  console.log(soma);
-});
+}
 
-/*
-if(e.classList.contains('checked')) {
-        console.log(e.attributes.value.value)
-      }
-
-const checkboxId = e.target.dataset.caminhanteId;
-
-  const clickedCheckbox = document.querySelector(
-    `[data-caminhante-id="${checkboxId}"]`
-  );
-
-  clickedCheckbox.classList.toggle("checked");
-
- */
+acc.addEventListener("click", handleAccordionClick);
+resultBtn.addEventListener("click", talentosCalculator);
