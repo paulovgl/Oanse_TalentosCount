@@ -49,6 +49,9 @@ const handleAccordionClick = (e) => {
 
   clickedAccordionHeader.classList.toggle("actived");
   accordionToBeOpened.classList.toggle("actived");
+
+  clearChecked();
+
   atualAccordionId = parseInt(accordionHeaderId);
   talentos = [0];
 };
@@ -60,7 +63,6 @@ const talentosCalculator = () => {
         if (caminhante[i].checked) {
           talentos.push(parseInt(caminhante[i].value));
         }
-        clearChecked(caminhante[i]);
       }
       break;
     case 2:
@@ -68,7 +70,6 @@ const talentosCalculator = () => {
         if (saltitante[i].checked) {
           talentos.push(parseInt(saltitante[i].value));
         }
-        clearChecked(saltitante[i]);
       }
       break;
     case 3:
@@ -76,7 +77,6 @@ const talentosCalculator = () => {
         if (escalador[i].checked) {
           talentos.push(parseInt(escalador[i].value));
         }
-        clearChecked(escalador[i]);
       }
       break;
     case 4:
@@ -84,7 +84,6 @@ const talentosCalculator = () => {
         if (sabia[i].checked) {
           talentos.push(parseInt(sabia[i].value));
         }
-        clearChecked(sabia[i]);
       }
       break;
     case 5:
@@ -92,7 +91,6 @@ const talentosCalculator = () => {
         if (aguia[i].checked) {
           talentos.push(parseInt(aguia[i].value));
         }
-        clearChecked(aguia[i]);
       }
       break;
     case 6:
@@ -100,7 +98,6 @@ const talentosCalculator = () => {
         if (carneiro[i].checked) {
           talentos.push(parseInt(carneiro[i].value));
         }
-        clearChecked(carneiro[i]);
       }
       break;
     case 7:
@@ -108,7 +105,6 @@ const talentosCalculator = () => {
         if (leao[i].checked) {
           talentos.push(parseInt(leao[i].value));
         }
-        clearChecked(leao[i]);
       }
       break;
     case 8:
@@ -116,7 +112,6 @@ const talentosCalculator = () => {
         if (sprint[i].checked) {
           talentos.push(parseInt(sprint[i].value));
         }
-        clearChecked(sprint[i]);
       }
       break;
     case 9:
@@ -124,7 +119,6 @@ const talentosCalculator = () => {
         if (maratona[i].checked) {
           talentos.push(parseInt(maratona[i].value));
         }
-        clearChecked(maratona[i]);
       }
       break;
     default:
@@ -134,12 +128,62 @@ const talentosCalculator = () => {
   const soma = talentos.reduce(function (soma, i) {
     return soma + i;
   });
+
   resultOutput.value = "T$" + soma;
   talentos = [0];
+  clearChecked();
 };
 
-const clearChecked = (checkbox) => {
-  checkbox.checked = false;
+const clearChecked = () => {
+  switch (atualAccordionId) {
+    case 1:
+      for (let i = 0; i < caminhante.length; i++) {
+        caminhante[i].checked = false;
+      }
+      break;
+    case 2:
+      for (let i = 0; i < saltitante.length; i++) {
+        saltitante[i].checked = false;
+      }
+      break;
+    case 3:
+      for (let i = 0; i < escalador.length; i++) {
+        escalador[i].checked = false;
+      }
+      break;
+    case 4:
+      for (let i = 0; i < sabia.length; i++) {
+        sabia[i].checked = false;
+      }
+      break;
+    case 5:
+      for (let i = 0; i < aguia.length; i++) {
+        aguia[i].checked = false;
+      }
+      break;
+    case 6:
+      for (let i = 0; i < carneiro.length; i++) {
+        carneiro[i].checked = false;
+      }
+      break;
+    case 7:
+      for (let i = 0; i < leao.length; i++) {
+        leao[i].checked = false;
+      }
+      break;
+    case 8:
+      for (let i = 0; i < sprint.length; i++) {
+        sprint[i].checked = false;
+      }
+      break;
+    case 9:
+      for (let i = 0; i < maratona.length; i++) {
+        maratona[i].checked = false;
+      }
+      break;
+    default:
+      break;
+  }
 };
 
 acc.addEventListener("click", handleAccordionClick);
