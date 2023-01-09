@@ -123,8 +123,8 @@ body {
 
 .accordion-body.actived {
   display: block;
+  max-height: max-content;
   margin-top: 15px;
-  max-height: 200px;
   overflow: hidden;
 }
 
