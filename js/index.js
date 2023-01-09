@@ -1,4 +1,6 @@
 const acc = document.querySelector(`[data-js="accordion"]`);
+const amor = document.getElementsByName("amor");
+const alegria = document.getElementsByName("alegria");
 const caminhante = document.getElementsByName("caminhante");
 const saltitante = document.getElementsByName("saltitante");
 const escalador = document.getElementsByName("escalador");
@@ -52,72 +54,86 @@ const handleAccordionClick = (e) => {
 
   clearChecked();
 
-  atualAccordionId = parseInt(accordionHeaderId);
+  atualAccordionId = parseFloat(accordionHeaderId);
   talentos = [0];
 };
 
 const talentosCalculator = () => {
   switch (atualAccordionId) {
+    case 10:
+      for (let i = 0; i < amor.length; i++) {
+        if (amor[i].checked) {
+          talentos.push(parseFloat(amor[i].value));
+        }
+      }
+      break;
+    case 11:
+      for (let i = 0; i < alegria.length; i++) {
+        if (alegria[i].checked) {
+          talentos.push(parseFloat(alegria[i].value));
+        }
+      }
+      break;
     case 1:
       for (let i = 0; i < caminhante.length; i++) {
         if (caminhante[i].checked) {
-          talentos.push(parseInt(caminhante[i].value));
+          talentos.push(parseFloat(caminhante[i].value));
         }
       }
       break;
     case 2:
       for (let i = 0; i < saltitante.length; i++) {
         if (saltitante[i].checked) {
-          talentos.push(parseInt(saltitante[i].value));
+          talentos.push(parseFloat(saltitante[i].value));
         }
       }
       break;
     case 3:
       for (let i = 0; i < escalador.length; i++) {
         if (escalador[i].checked) {
-          talentos.push(parseInt(escalador[i].value));
+          talentos.push(parseFloat(escalador[i].value));
         }
       }
       break;
     case 4:
       for (let i = 0; i < sabia.length; i++) {
         if (sabia[i].checked) {
-          talentos.push(parseInt(sabia[i].value));
+          talentos.push(parseFloat(sabia[i].value));
         }
       }
       break;
     case 5:
       for (let i = 0; i < aguia.length; i++) {
         if (aguia[i].checked) {
-          talentos.push(parseInt(aguia[i].value));
+          talentos.push(parseFloat(aguia[i].value));
         }
       }
       break;
     case 6:
       for (let i = 0; i < carneiro.length; i++) {
         if (carneiro[i].checked) {
-          talentos.push(parseInt(carneiro[i].value));
+          talentos.push(parseFloat(carneiro[i].value));
         }
       }
       break;
     case 7:
       for (let i = 0; i < leao.length; i++) {
         if (leao[i].checked) {
-          talentos.push(parseInt(leao[i].value));
+          talentos.push(parseFloat(leao[i].value));
         }
       }
       break;
     case 8:
       for (let i = 0; i < sprint.length; i++) {
         if (sprint[i].checked) {
-          talentos.push(parseInt(sprint[i].value));
+          talentos.push(parseFloat(sprint[i].value));
         }
       }
       break;
     case 9:
       for (let i = 0; i < maratona.length; i++) {
         if (maratona[i].checked) {
-          talentos.push(parseInt(maratona[i].value));
+          talentos.push(parseFloat(maratona[i].value));
         }
       }
       break;
@@ -136,6 +152,16 @@ const talentosCalculator = () => {
 
 const clearChecked = () => {
   switch (atualAccordionId) {
+    case 10:
+      for (let i = 0; i < amor.length; i++) {
+        amor[i].checked = false;
+      }
+      break;
+    case 11:
+      for (let i = 0; i < alegria.length; i++) {
+        alegria[i].checked = false;
+      }
+      break;
     case 1:
       for (let i = 0; i < caminhante.length; i++) {
         caminhante[i].checked = false;
