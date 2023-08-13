@@ -128,7 +128,7 @@ strong {
 
 .accordion-body.actived {
   display: block;
-  max-height: 1200px;
+  max-height: 2000px;
   margin-top: 15px;
   overflow: hidden;
 }
